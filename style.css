@@ -1,0 +1,12 @@
+:root {
+    --blue: #161826;
+    --dark-text: #131313;
+    --white: #ffffff;
+    --primary-background: #F3F0F0;
+    --secondary-background: #000000;
+
+    --title-font: 'Montserrat', sans-serif;
+
+    --container-width: 1920px;
+    --transition: all 0.3s ease;
+}
