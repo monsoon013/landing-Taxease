@@ -10,8 +10,13 @@
     --primary-font: 'Montserrat', sans-serif;
     --secodary-font: 'Inter', sans-serif;
 
-    --container-width: 1200px;
     --transition: all 0.3s ease;
+}
+
+body, html {
+    overflow-x: hidden;
+    margin: unset;
+    padding: unset;
 }
 
 body {
@@ -40,6 +45,7 @@ button:hover {
 h2 {
     font-size: 45px;
     font-weight: 300;
+    margin: unset;
 }
 
 h3{
@@ -52,6 +58,12 @@ p{
     font-family: var(--secodary-font);
     font-size: 17px;
     color: #292929;
+}
+
+section {
+    display: flex;
+    padding: 240px 0;
+
 }
 
 .login {
@@ -147,40 +159,38 @@ nav {
 
 .about-software{
     display:flex;
-    align-items: stretch;
-    justify-content: center;
+    flex-direction: row;
     width: 100%;
-    margin-top: 250px;
-    margin-bottom: 120px;
+    max-width: unset;
+    padding: 0 !important;
 }
 
 .about-software .left-container {
-    flex: 4;
     display: flex;
-    justify-content: flex-end;
+    width: 100%;
+
+
 }
 
 .software-pic {
     width: 100%;
     height: 100%;
-    height: 500px;
     object-fit: cover;
     border-radius: 0px 80px 0 0;
     display: block;
     margin-top: -88px;
-    border: 1px solid var(--blue);
+    border: 2px solid var(--blue);
 }
 
 .about-software .right-container {
-    flex:6;
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    padding:50px 90px;
-    border-radius: 0 0 0  80px;
-    background-color: var(--blue);
+    padding: 50px 70px;
+    background: var(--blue);
     color: #ffffff;
-   padding-bottom: 130px;
+    width: 100%;
+    border-radius: 0 0 0 80px;
+
 
 }
 
@@ -190,7 +200,7 @@ nav {
 }
 
 .right-container p {
-    max-width: 1050px;
+    max-width: 100%;
     color: #FFFFFF;
     font-weight: 400;
 }
@@ -202,18 +212,19 @@ nav {
 }
 
 .features-software {
-    padding: 120px 10%;
     display: flex;
-    justify-content: center;
+   
+
 
 }
 
 .features-grid {
     display: grid;
+    justify-items: center;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto auto;
-    gap: 120px 60px;
-    width:100%;
+    grid-template-rows: auto auto auto ;
+    
+
 }
 
 .feature {
@@ -221,21 +232,28 @@ nav {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    justify-content: center;
+    width: 1.5rem;
+    gap: 30px;
 }
 
 .feature-left1{
+    width: 80%;
     grid-area: 1 / 1 / 1 / 2;
 }
 
 .feature-right1{
+    width: 80%;
     grid-area: 2 / 2 / 2 / 3;
 }
 
 .feature-left2{
+    width: 80%;
     grid-area: 3 / 1 / 3/ 2;
 }
 
 .advantages {
+    display: flex;
     background:linear-gradient(180deg, var(--primary-background) 0%, #1a1e29 30%);
     color:#FFFFFF;
     padding: 200px 10%;
@@ -278,7 +296,6 @@ nav {
     grid-template-columns: repeat(2, 1fr);
     background:linear-gradient(180deg, #1a1e29 30%, var(--secondary-background)100%);
     color: #FFFFFF;
-
 }
 
 .forWho .left-container{
@@ -355,4 +372,89 @@ footer {
 
 
 
+@media (max-width: 767px){
+    section {
+        padding: 100px 20px;
+        min-width: 345px;
+    }
 
+    h1{
+        font-size: 34px;
+    }
+
+    h2{
+        font-size: 26px;
+
+    }
+
+    p{
+        font-size: 12px;
+    }
+
+    nav {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero{
+        margin: 50px 0;
+    }
+
+    .about-software .left-container{
+        visibility: hidden;
+        display: none;
+    }
+
+    .about-software .right-container{
+        border-radius: unset;
+
+    }
+
+    .about-software .right-container li {
+        font-family: var(--secodary-font);
+        font-size: 14px;
+        text-align: left;
+    }
+
+
+    .features-grid{
+        grid-template-columns: 1fr;
+        grid-row: repeat(3, 1fr);
+    }
+
+    .feature {
+        grid-area: unset;
+        padding: 40px 0;
+    }
+
+    .advantages{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .column-full{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .advant-grid{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+    
+    .advantage img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .forWho{
+        grid-template-columns: 1fr;
+    }
+
+    .forWho .left-container{
+        padding: unset;
+    }
+
+    .close-cta {
+
+    }
+}
