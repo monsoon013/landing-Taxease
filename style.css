@@ -245,6 +245,7 @@ nav {
 }
 
 .column-full h2 {
+    padding-top: 50px;
     font-weight: 300;
     margin-bottom: 20px;
 }
@@ -253,6 +254,7 @@ nav {
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
+    color:  #ffffff;
 }
 
 .advant-grid {
@@ -284,6 +286,7 @@ nav {
 
 .forWho .left-container p {
     margin-bottom: 10px !important;
+    color: #ffffff;
 }
 
 .forWho .right-container{
@@ -317,6 +320,13 @@ footer {
     color: var(--white);
     padding: 50px;
     font-family: 'Montserrat', sans-serif;
+}
+
+.Taxease p {
+    color: #ffffff;
+    font-family: var(--primary-font);
+    font-weight: 300;
+    font-size: 14px;
 }
 
 .copyright {
