@@ -191,6 +191,8 @@ nav {
 
 .right-container p {
     max-width: 1050px;
+    color: #FFFFFF;
+    font-weight: 400;
 }
 
 .right-container li {
