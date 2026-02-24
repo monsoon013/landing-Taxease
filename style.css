@@ -51,6 +51,7 @@ h3{
 p{
     font-family: var(--secodary-font);
     font-size: 17px;
+    color: #292929;
 }
 
 .login {
@@ -233,10 +234,9 @@ nav {
 }
 
 .advantages {
-    background:linear-gradient(180deg, #3d4351 0%, #1a1e29 30%);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background:linear-gradient(180deg, var(--primary-background) 0%, #1a1e29 30%);
     color:#FFFFFF;
-    padding: 120px 10%;
+    padding: 200px 10%;
     text-align: center;
 }
 
@@ -272,7 +272,7 @@ nav {
 .forWho {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    background: var(--secondary-background);
+    background:linear-gradient(180deg, #1a1e29 30%, var(--secondary-background)100%);
     color: #FFFFFF;
 
 }
@@ -280,6 +280,10 @@ nav {
 .forWho .left-container{
     width: 100%;
     padding: 100px;
+}
+
+.forWho .left-container p {
+    margin-bottom: 10px !important;
 }
 
 .forWho .right-container{
