@@ -27,6 +27,13 @@ body {
     width: 100%;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
 button {
     color: #131313;
     background-color: #c0a78f;
@@ -40,6 +47,12 @@ button:hover {
     color: #FFFFFF;
     background-color: #161826;
     border: 1px solid var(--button-active);
+}
+
+nav button:hover {
+    border: unset;
+    background-color: unset;
+    color: unset;
 }
 
 h2 {
@@ -82,6 +95,21 @@ section {
 
 .cta {
      padding: 20px 10px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background-color: #ffffff;
 }
 
 nav ul {
@@ -213,15 +241,12 @@ nav {
 
 .features-software {
     display: flex;
-   
-
-
 }
 
 .features-grid {
     display: grid;
     justify-items: center;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr ;
     grid-template-rows: auto auto auto ;
     
 
@@ -254,6 +279,7 @@ nav {
 
 .advantages {
     display: flex;
+    flex-direction: row;
     background:linear-gradient(180deg, var(--primary-background) 0%, #1a1e29 30%);
     color:#FFFFFF;
     padding: 200px 10%;
@@ -373,13 +399,18 @@ footer {
 
 
 @media (max-width: 767px){
+    * {
+        box-sizing: border-box;
+    } 
+
     section {
-        padding: 100px 20px;
-        min-width: 345px;
+       width: 100%;
+       max-width: 767px;
+       
     }
 
-    h1{
-        font-size: 34px;
+    .left-container h1{
+        font-size: 38px;
     }
 
     h2{
@@ -389,14 +420,49 @@ footer {
 
     p{
         font-size: 12px;
+        font-weight: 200;
     }
 
     nav {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr auto;
+        position: relative;
+    }
+
+    .menu-toggle{
+        display: flex;
+    }
+
+    .navegacion{
+       display: none;
+       flex-direction: column;
+       width: 100%;
+       position: absolute;
+       top: 100%;
+       left: 0;
+       background: #ffffff;
+       padding: 20px 0;
+       z-index: 200;
+    }
+
+    .navegacion.active {
+        display: flex;
+    }
+    .navegacion li {
+        margin: 15px 0
     }
 
     .hero{
-        margin: 50px 0;
+        margin: unset;
+        padding: 80px 20px 50px 20px;
+        min-height: 67vh;
+    }
+
+    .hero p {
+        font-weight: 200;
+    }
+
+    .about-us{
+        font-size: 14px !important;
     }
 
     .about-software .left-container{
@@ -406,29 +472,45 @@ footer {
 
     .about-software .right-container{
         border-radius: unset;
+        padding: 50px 20px 50px 20px;
+    }
 
+    .about-software .right-container p {
+        font-weight: 200;
     }
 
     .about-software .right-container li {
         font-family: var(--secodary-font);
         font-size: 14px;
         text-align: left;
+        font-weight: 200;
     }
 
 
     .features-grid{
         grid-template-columns: 1fr;
         grid-row: repeat(3, 1fr);
+        padding: 50px 20px 50px 20px
     }
+
 
     .feature {
         grid-area: unset;
-        padding: 40px 0;
+        padding:unset;
+        margin: 20px 0;
     }
+
+    .feature img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /*advantages*/
 
     .advantages{
         display: flex;
         flex-direction: column;
+        padding: 50px 20px 50px 20px;
     }
 
     .column-full{
@@ -442,19 +524,64 @@ footer {
     }
     
     .advantage img {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
     }
+
+    .advantage h3 {
+        font-size: 18px;
+    }
+
+    /*forWho*/
 
     .forWho{
         grid-template-columns: 1fr;
+        padding: 50px 20px 50px 20px;
     }
 
     .forWho .left-container{
         padding: unset;
     }
 
-    .close-cta {
-
+    .forWho .left-container ul {
+        font-size: 12px;
+        font-weight: 200;
     }
+
+    .forWho .left-container p {
+        font-weight: 200;
+    }
+
+    /*cta*/
+
+    .close-cta {
+        padding: 50px 20px 50px 20px;
+    }
+
+    /*footer*/
+
+    footer {
+        padding: 50px 20px 50px 20px;
+    }
+    .gen-info{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+        padding: unset;
+    }
+
+    .Taxease p {
+        font-weight: 200;
+        font-size: 12px;
+    }
+
+    .gen-info  li {
+        font-weight: 200;
+        font-size: 12px;
+    }
+
+    .gen-info span {
+        padding-top: 20px;
+        justify-content: left;
+    }
+    
 }
