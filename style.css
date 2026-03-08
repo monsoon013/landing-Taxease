@@ -51,6 +51,7 @@ h3{
 p{
     font-family: var(--secodary-font);
     font-size: 17px;
+    color: #292929;
 }
 
 .login {
@@ -141,7 +142,7 @@ nav {
 .about-us{
     text-decoration: underline;
     text-underline-offset: 6px;
-
+    color: var(--dark-text)
 }
 
 .about-software{
@@ -190,6 +191,8 @@ nav {
 
 .right-container p {
     max-width: 1050px;
+    color: #FFFFFF;
+    font-weight: 400;
 }
 
 .right-container li {
@@ -233,12 +236,9 @@ nav {
 }
 
 .advantages {
-    background:linear-gradient(180deg, #3d4351 0%, #1a1e29 30%);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    background:linear-gradient(180deg, var(--primary-background) 0%, #1a1e29 30%);
     color:#FFFFFF;
-    padding: 120px 10%;
-    margin-top: 120px;
-    margin-bottom: 120px;
+    padding: 200px 10%;
     text-align: center;
 }
 
@@ -247,6 +247,7 @@ nav {
 }
 
 .column-full h2 {
+    padding-top: 50px;
     font-weight: 300;
     margin-bottom: 20px;
 }
@@ -255,6 +256,7 @@ nav {
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.6;
+    color:  #ffffff;
 }
 
 .advant-grid {
@@ -270,6 +272,88 @@ nav {
     flex-direction: column;
     align-items: center;
 }
+
+.forWho {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background:linear-gradient(180deg, #1a1e29 30%, var(--secondary-background)100%);
+    color: #FFFFFF;
+
+}
+
+.forWho .left-container{
+    width: 100%;
+    padding: 100px;
+}
+
+.forWho .left-container p {
+    margin-bottom: 10px !important;
+    color: #ffffff;
+}
+
+.forWho .right-container{
+    width: 100%;
+}
+
+.close-cta {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: var(--secondary-background);
+    color: #ffffff;
+    text-align: center;
+
+}
+
+.close-cta button {
+    margin-top: 20px;
+}
+
+
+footer {
+    background: var(--secondary-background);
+    padding: 50px;
+}
+
+.gen-info{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-content: center;
+    color: var(--white);
+    padding: 50px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.Taxease p {
+    color: #ffffff;
+    font-family: var(--primary-font);
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 20px;
+    color: #ffffff;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.gen-info span {
+    display: flex;
+    font-weight: 600;
+    justify-content: center;
+}
+
+.gen-info li {
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+
 
 
 
