@@ -279,7 +279,8 @@ nav {
 
 .advantages {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    width:100%;
     background:linear-gradient(180deg, var(--primary-background) 0%, #1a1e29 30%);
     color:#FFFFFF;
     padding: 200px 10%;
