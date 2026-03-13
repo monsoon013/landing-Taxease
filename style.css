@@ -283,7 +283,7 @@ nav {
     width:100%;
     background:linear-gradient(180deg, var(--primary-background) 0%, #1a1e29 30%);
     color:#FFFFFF;
-    padding: 200px 10%;
+    padding: 200px 20px;
     text-align: center;
 }
 
