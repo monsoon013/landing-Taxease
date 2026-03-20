@@ -79,6 +79,17 @@ section {
 
 }
 
+.botones-modos  {
+    width: 18%;
+    background-color: var(--button-active) !important;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+
+
+
+
 .login {
     display: flex;
     align-items: center;
